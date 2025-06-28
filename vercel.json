@@ -8,6 +8,6 @@
     }
   ],
   "routes": [
-    { "src": "/dist/output.css", "dest": "/dist/output.css" }
+    { "src": "/output.css", "dest": "/dist/output.css" }
   ]
 }
