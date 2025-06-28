@@ -12,10 +12,13 @@
   "routes": [
     {
       "src": "/output.css",
-      "dest": "/dist/output.css"
+      "dest": "/dist/output.css",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
-      "src": "/(.*)", 
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
