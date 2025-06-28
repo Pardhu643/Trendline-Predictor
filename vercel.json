@@ -5,21 +5,17 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
-        "includeFiles": ["dist/output.css", "index.html"]
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/output.css",
-      "dest": "/dist/output.css",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "dest": "/dist/output.css"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.*)", 
       "dest": "/index.html"
     }
   ]

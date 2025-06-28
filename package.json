@@ -2,9 +2,10 @@
   "name": "trendline-predictor",
   "version": "1.0.0",
   "scripts": {
-    "build": "rm -rf dist && tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
-  },
+  "prebuild": "if not exist dist mkdir dist",
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+  "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+},
   "dependencies": {
     "tailwindcss": "^3.3.3"
   },
